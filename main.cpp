@@ -6,7 +6,6 @@
 #include <SDL3/SDL.h>
 #include "myMath.h"
 #include "indices.h"
-#include "panels.h"
 #include "rows.h"
 
 int WIDTH = 800;
