@@ -1,6 +1,19 @@
 #pragma once
 
-const uint16_t Cube_vert_ind[12 * 2] =	// 12 Pairs of indices (points of Cube)
+// Basic 3D Cube model. 4 points(vertices) per face. There's a Front & Back face
+std::vector < Point> Cube =
+{
+{-20,-20,  0},	// Front Top Left
+{ 20,-20,  0},	// Front Top Right
+{ 20, 20,  0},	// Front Bottom Right
+{-20, 20,  0},	// Front Bottom Left
+{-20,-20, 40},	// Back Top Left
+{ 20,-20, 40},	// Back Top Right
+{ 20, 20, 40},	// Back Bottom Right
+{-20, 20, 40},	// Back Bottom Left
+};
+
+const uint16_t Cube_vert_ind[12 * 2] =	// 12 Pairs of indices (points of Cube). 8 lines for the two faces plus 4 lines joining the faces together
 {
 0,1,	// Front Top Left		-> Front Top Right
 1,2,	// Front Top Right		-> Front Bottom Right
