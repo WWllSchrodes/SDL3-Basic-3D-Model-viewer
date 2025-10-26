@@ -2,3 +2,6 @@
 I made this to test 3D panels I'm creating for a Star Wars Deathstar Run animation I'm working on that runs on an ESP32 using the TGX library
 
 Use arrow keys to rotate and w,s keys to move up/down
+
+![alt text](https://github.com/[WWllSchrodes]/[SDL3-Basic-3D-Model-viewer]/blob/[branch]/Cube.jpg?raw=true)
+![alt text](https://github.com/[WWllSchrodes]/[SDL3-Basic-3D-Model-viewer]/blob/[branch]/R05_3D.jpg?raw=true)
