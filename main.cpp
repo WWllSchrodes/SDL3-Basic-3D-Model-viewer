@@ -5,20 +5,22 @@
 #include <cmath>
 #include <SDL3/SDL.h>
 #include "myMath.h"
+#include "cube.h"
 #include "indices.h"
 #include "rows.h"
 
 int WIDTH = 800;
 int HEIGHT = 600;
 
-void count(SDL_Renderer* renderer, std::vector<Point>& R05_3D) {     
-    const uint16_t* ind_vertices = R05_3D_WF_vert_ind;
+// Render a basic 3D Cube
+void count(SDL_Renderer* renderer, std::vector<Point>& Cube) {     
+    const uint16_t* ind_vertices = Cube_vert_ind;
     double x, x1, y, y1, z, z1 = 0;
     float scale = 0.05;
-    int nb_lines = 286 * 2; // from vert_ind must match or error!!
+    int nb_lines = 12 * 2; // from vert_ind must match or error!!
     for (int n = 0; n < nb_lines; n += 2) {
-        Point L0 = (R05_3D[ind_vertices[n]]);
-        Point L1 = (R05_3D[ind_vertices[n + 1]]);
+        Point L0 = (Cube[ind_vertices[n]]);
+        Point L1 = (Cube[ind_vertices[n + 1]]);
 
         x = L0.x;
         y = L0.y;
@@ -50,7 +52,7 @@ int main() {
     int scale = 3;
 
     // scale and move to center of screen
-    for (Point& p : R05_3D) {
+    for (Point& p : Cube) {
         p.x = (scale * p.x + screenShift.x);
         p.y = (scale * p.y + screenShift.y);
         p.z = (scale * p.z + screenShift.z);
@@ -118,7 +120,7 @@ int main() {
         Matrix rotationXYZ = getRotationMatrix(rx, ry, rz);
 
         // rotation then move to center of screen
-        for (Point& p : R05_3D) {
+        for (Point& p : Cube) {
             p = translate(screenShiftOpposite, p);
             p = transform(rotationXYZ, p);
             p = translate(screenShift, p);
@@ -131,7 +133,7 @@ int main() {
         SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 
         // draw 3D panels
-        count(renderer, R05_3D);
+        count(renderer, Cube);
 
         // swap buffers
         SDL_RenderPresent(renderer);
