@@ -4,6 +4,6 @@ I made this to test 3D panels I'm creating for a Star Wars Deathstar Run animati
 Use arrow keys to rotate and w,s keys to move up/down
 
 ![Alt text](Cube.jpg)
+![Alt text](R05_3D.jpg)
 
-![alt text](https://github.com/[WWllSchrodes]/[SDL3-Basic-3D-Model-viewer]/blob/[main]/Cube.jpg?raw=true)
-![alt text](https://github.com/[WWllSchrodes]/[SDL3-Basic-3D-Model-viewer]/blob/[main]/R05_3D.jpg?raw=true)
+
